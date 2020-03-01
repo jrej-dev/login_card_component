@@ -1,0 +1,62 @@
+@import "../scss/colors";
+@import "../scss/mixins";
+
+html {
+  height: 100%;
+  text-align: center;
+  background: $kuflink-gradient;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.grid-container {
+  display: grid;
+  row-gap: 2em;
+  min-height: 100vh;
+  grid-template-columns: 100%;
+  grid-template-rows: 5em auto auto 5em;
+  grid-template-areas:
+    "nav"
+    "card"
+    "quote"
+    "footer"
+  ;
+}
+
+.navbar {
+  grid-area: nav;
+  background: $light-color;
+  @include flex(flex-start);
+}
+
+.card-container {
+  @include flex(center)
+  grid-area: card;
+  margin: 0 2em
+}
+
+.quote {
+  @include flex(center)
+  grid-area: quote;
+  color: $light-color;
+  margin: 5em;
+}
+
+.footer-container {
+  @include flex(center)
+  grid-area: footer;
+  background: $light-color;
+}
+
+@media only screen and (min-width: 1000px) {
+  .grid-container {
+    margin: 0;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-rows: 5em auto 5em;
+    grid-template-areas:
+      "nav nav nav" 
+      "card quote quote"
+      "footer footer footer"
+    ;
+  }
+}

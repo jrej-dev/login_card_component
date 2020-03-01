@@ -1,0 +1,116 @@
+@import "../../../containers/scss/mixins";
+@import "../../../containers/scss/colors";
+
+.card {
+  min-height: 0;
+  min-width: 200px;
+}
+
+.card-container {
+  display: grid;
+  height: auto;
+  background-color: $light-color;
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: 1fr 3fr 1fr 1fr;
+  grid-template-areas:
+    "card-thumbnail card-h1 card-h1 card-h1"
+    "card-image card-image card-image card-image"
+    "card-blurb card-blurb card-blurb card-blurb"
+    "card-action-1 card-action-2 heart-icon share-icon";
+}
+
+.card-thumbnail {
+  grid-area: card-thumbnail;
+  max-height: 75px;
+  min-width: 50%;
+  margin: 0 1em;
+  justify-self: center;
+  overflow: hidden;
+  border-radius: 50%;
+  > img {
+    width: 100%;
+  }
+}
+
+h1 {
+  grid-area: card-h1;
+  margin: 0 0.5em;
+  font-size: 1.5em;
+  text-align: left;
+}
+
+h2 {
+  display: none;
+  grid-area: card-h2;
+  margin-left: 0.5em;
+  margin-top: 0;
+  text-align: left;
+}
+
+.card-image {
+  grid-area: card-image;
+  > img {
+    min-width: 100%;
+    max-width: 100%;
+    height: max-content;
+    object-fit: cover;
+  }
+}
+
+.card-description {
+  grid-area: card-blurb;
+  padding: 0 2em;
+}
+
+.action {
+  color: $primary-color;
+  cursor: pointer;
+  font-weight: bold;
+  justify-self: center;
+  width: fit-content;
+  &.active {
+    display: none;
+  }
+}
+
+.icon-container {
+  width: m;
+  > .icon :hover {
+    cursor: pointer;
+    color: $secondary-color;
+  }
+  &.heart {
+    grid-area: heart-icon;
+    text-align: right;
+    > .active {
+      color: $alert-color;
+    }
+  }
+  &.share {
+    grid-area: share-icon;
+  }
+}
+
+@media only screen and (min-width: 1000px) {
+  .card-container {
+    display: grid;
+    height: 100%;
+    background-color: white;
+    grid-template-columns: repeat(4, 1fr);
+    grid-template-rows: 0.5fr 0.5fr 3fr 1fr 1fr;
+    grid-template-areas:
+      "card-thumbnail card-h1 card-h1 card-h1"
+      "card-thumbnail card-h2 card-h2 card-h2"
+      "card-image card-image card-image card-image"
+      "card-blurb card-blurb card-blurb card-blurb"
+      "action action heart-icon share-icon";
+  }
+  h2 {
+    display: block;
+  }
+  h1 {
+    margin-bottom: 0;
+    margin-left: 0.5em;
+    font-size: 2em;
+  }
+}
