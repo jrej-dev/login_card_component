@@ -1,0 +1,23 @@
+{
+  "files": {
+    "main.css": "/login_card_component/static/css/main.10a2b212.chunk.css",
+    "main.js": "/login_card_component/static/js/main.eea9d229.chunk.js",
+    "main.js.map": "/login_card_component/static/js/main.eea9d229.chunk.js.map",
+    "runtime-main.js": "/login_card_component/static/js/runtime-main.6f7971ef.js",
+    "runtime-main.js.map": "/login_card_component/static/js/runtime-main.6f7971ef.js.map",
+    "static/js/2.724bddff.chunk.js": "/login_card_component/static/js/2.724bddff.chunk.js",
+    "static/js/2.724bddff.chunk.js.map": "/login_card_component/static/js/2.724bddff.chunk.js.map",
+    "index.html": "/login_card_component/index.html",
+    "precache-manifest.96c321b4f4f3cb34e0be2956af90263c.js": "/login_card_component/precache-manifest.96c321b4f4f3cb34e0be2956af90263c.js",
+    "service-worker.js": "/login_card_component/service-worker.js",
+    "static/css/main.10a2b212.chunk.css.map": "/login_card_component/static/css/main.10a2b212.chunk.css.map",
+    "static/js/2.724bddff.chunk.js.LICENSE.txt": "/login_card_component/static/js/2.724bddff.chunk.js.LICENSE.txt",
+    "static/media/logo.svg": "/login_card_component/static/media/logo.b304d6bf.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.6f7971ef.js",
+    "static/js/2.724bddff.chunk.js",
+    "static/css/main.10a2b212.chunk.css",
+    "static/js/main.eea9d229.chunk.js"
+  ]
+}
