@@ -6,10 +6,15 @@ Technology used:
     - React-Fontawesome
 
 The structure of the app uses CSS grid.
-You'll find colors and mixins in the src/scss folder.
-    
-I have set up SASS support with npm install node-sass --save for create-react-app. You don't need to change any other configuration.
-I have install the SASS Live compiler for the project as well.
+   
+I have set up SASS support with node-sass for create-react-app. You don't need to change any other configuration.
+You'll find colors and mixins in the src/containers/scss folder.
+
+The actions from the card component use a simple login logic with usernames and localstorage.
+
+You can preview the deployed app by using the following link http://jrejoire.github.io/login_card_component
+
+Below the main commands from Creat React App:
 
 ## Available Scripts
 
